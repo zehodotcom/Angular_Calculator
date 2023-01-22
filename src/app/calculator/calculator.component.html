@@ -1,0 +1,47 @@
+<div class="container-fluid h-100 d-flex justify-content-center" >
+  <div class="jumbotron col-sm-6 p-2 m-0 p-10 text-center ">
+    <h2 class="text-left" style="display:inline-block">CASIO</h2>
+    <div class="square" style="display:inline-block;"></div>
+  <!-- Display user input - this div element displays the input entered by the user -->
+    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
+      <div class="showdisplay form-control text-lg-right" type="text">{{input}}</div>
+    </div>
+   <!-- Display Result - this div element displays the result of the calculation -->
+    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
+      <div class="showdisplay form-control text-lg-right" type="text">{{result}}</div>
+    </div>
+   <!-- The remaining columns -->
+    <div class="col-sm12 p-1 m-0">
+      <button class="btn btn-outline-secondary col-sm-6" type="button"  id="delete" (click)="deleteAllNumbers()">C</button>
+      <button class="btn btn-outline-secondary col-sm-3" type="button" id="delete" (click)="deleteNumber()">DELETE</button>
+      <button class="btn btn-outline-secondary col-sm-3" type="button" (click)="operatorButton('/')">/</button>
+    </div>
+
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('7')">7</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('8')">8</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('9')">9</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="operatorButton('*')">X</button>
+    </div>
+
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('4')">4</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('5')">5</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('6')">6</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="operatorButton('-')">-</button>
+    </div>
+
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('1')">1</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('2')">2</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('3')">3</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="operatorButton('+')">+</button>
+    </div>
+
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('.')">.</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="numberButton('0')">0</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-6 p-1" type="button" (click)="calculateResult()">=</button>
+    </div>
+  </div>
+</div>
